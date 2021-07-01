@@ -17,10 +17,12 @@ To run the code, you will need Spark. A standalone Spark can be installed on Win
   * Move the exe to `HADOOP_HOME\bin`
 * Set Windows Environment Variables: 
   * SPARK_HOME to path above
-  * HADOOP_HOME to path SPARK_HOME\hadoop\
     * Test: `echo %SPARK_HOME%`
+  * HADOOP_HOME to path SPARK_HOME\hadoop\
     * Test: `echo %HADOOP_HOME%`
-
+  * Append to PATH
+    * %SPARK_HOME%\bin
+    * %HADOOP_HOME%\bin
 Also, make sure your `sys.path` includes `SPARK_HOME\python` location. If you use PyCharm, this can be added in the [Settings](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-reloading-interpreter-paths.html). Alternatively, you can add it by defining PYTHONPATH environment variable or by inserting the path using sys.path.insert() function in the beginning of your code.
 
 When you initialize the SparkSession, it downloads the Delta Lake jars from Maven. There is no need to download those manually.

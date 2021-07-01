@@ -26,4 +26,4 @@ schema = StructType([
 
 df = spark.createDataFrame(data=data, schema=schema)
 
-print(df.show())
+df.repartition(1).write.mode("overwrite").format("delta").save("removeme")

@@ -2,3 +2,6 @@
 venv/
 .ipynb_checkpoints/
 .idea/
+
+# Any datasets generated
+S3/
