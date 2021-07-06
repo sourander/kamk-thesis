@@ -15,6 +15,7 @@ To run the code, you will need Spark. A standalone Spark can be installed on Win
     * e.g. `D:\spark\spark-3.1.1-bin-hadoop3.2\`
 * Download the matching version of [Winutils.exe](https://github.com/cdarlint/winutils/tree/master/hadoop-3.2.1/bin)
   * Move the exe to `HADOOP_HOME\bin`
+  * Move the hadoop.dll to System32
 * Set Windows Environment Variables: 
   * SPARK_HOME to path above
     * Test: `echo %SPARK_HOME%`
