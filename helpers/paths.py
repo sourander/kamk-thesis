@@ -1,5 +1,6 @@
 import os
 
+
 class PathMerger:
     """Class for generating staging and bronze paths."""
 
@@ -8,7 +9,7 @@ class PathMerger:
     src_prefix = 'staging'
     brz_prefix = 'bronze'
     tool = 'dms'
-    ss = 'company_rds'
+    ss = 'abc'  # An alias for the source RDS. Example: an RDS that holds a single microservices data.
 
     # Paths. These will be populated during class init.
     staging = None
@@ -31,4 +32,3 @@ class PathMerger:
         # Hive
         table_nous = self.table.replace("_", "")
         self.hive = f"{self.brz_prefix}.{self.db}_{table_nous}"
-
