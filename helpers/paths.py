@@ -31,4 +31,4 @@ class PathMerger:
 
         # Hive
         table_nous = self.table.replace("_", "")
-        self.hive = f"{self.brz_prefix}.{self.db}_{table_nous}"
+        self.hive = f"{self.brz_prefix}.{self.ss}_{self.db}_{table_nous}"
